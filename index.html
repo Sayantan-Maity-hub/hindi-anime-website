@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi Anime - Download & Download Hindi Dubbed Anime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --sky-50: #f0f9ff;
+            --sky-100: #e0f2fe;
+            --sky-200: #bae6fd;
+            --sky-300: #7dd3fc;
+            --sky-400: #38bdf8;
+            --sky-500: #0ea5e9;
+            --sky-600: #0284c7;
+            --sky-700: #0369a1;
+            --sky-800: #075985;
+            --sky-900: #0c4a6e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--sky-50);
+            color: #333;
+        }
+
+        .nav-gradient {
+            background: linear-gradient(135deg, var(--sky-600), var(--sky-400));
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to right, var(--sky-500), var(--sky-300));
+        }
+
+        .anime-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .anime-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .anime-card-img {
+            transition: transform 0.5s ease;
+        }
+
+        .anime-card:hover .anime-card-img {
+            transform: scale(1.05);
+        }
+
+        .genre-tag {
+            background-color: var(--sky-100);
+            color: var(--sky-800);
+            transition: all 0.3s ease;
+        }
+
+        .genre-tag:hover {
+            background-color: var(--sky-200);
+        }
+
+        .search-container {
+            transition: all 0.3s ease;
+        }
+
+        .search-container:focus-within {
+            box-shadow: 0 0 0 2px var(--sky-400);
+        }
+
+        .pagination-btn {
+            transition: all 0.3s ease;
+        }
+
+        .pagination-btn:hover {
+            background-color: var(--sky-500);
+            color: white;
+        }
+
+        .mobile-menu {
+            transition: height 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="homePage">
+        <!-- Navigation Bar -->
+        <nav class="flex items-center justify-between px-6 py-3 bg-gradient-to-r from-sky-600 to-sky-400 text-white">
+  <!-- Left: Logo + Website Name -->
+  <div class="flex items-center space-x-2">
+    <img src="Image/hindianimelogo.png" alt="Hindi Anime Logo" class="h-10 w-10 rounded-full">
+    <span class="text-3xl font-extrabold">Hindi Anime</span>
+  </div>
+
+  <!-- Center: Nav Links -->
+  <div class="hidden md:flex space-x-6">
+    <a href="#" class="hover:text-gray-300">Home</a>
+    <a href="#" class="hover:text-gray-300">About</a>
+    <a href="#" class="hover:text-gray-300">Contact</a>
+  </div>
+
+  <!-- Right: Social Icons -->
+  <div class="hidden md:flex items-center space-x-4">
+    <a href="#" target="_blank">
+      <img src="Image/icons8-facebook-logo-94.png" alt="Facebook" class="h-6 w-6">
+    </a>
+    <a href="#" target="_blank">
+      <img src="Image/icons8-telegram-50.png" alt="Telegram" class="h-6 w-6">
+    </a>
+    <a href="#" target="_blank">
+      <img src="Image/icons8-instagram-94.png" alt="Instagram" class="h-6 w-6">
+    </a>
+  </div>
+</nav>
+
+
+        <!-- Hero Section -->
+        <section class="hero-gradient text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Download & Download Hindi Dubbed Anime</h1>
+                    <p class="text-xl mb-8">
+                        The largest collection of high-quality Hindi dubbed anime. Download your favorite shows for free
+                        in
+                        HD quality or download them to watch offline.
+                    </p>
+
+                    <!-- Search Bar -->
+                    <div
+                        class="search-container max-w-2xl mx-auto bg-white rounded-full overflow-hidden flex items-center px-4 py-2">
+                        <input type="text" placeholder="Search for anime..."
+                            class="flex-grow px-4 py-2 focus:outline-none text-gray-800">
+                        <button class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 rounded-full transition-colors">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="container mx-auto px-4 py-8">
+            <!-- Popular Anime Section -->
+            <section id="popular" class="mb-12">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-sky-800">Popular Anime</h2>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">View All</a>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <!-- Anime Card 1 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('demon-slayer')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/demon-slayer.png" alt="Demon Slayer"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Demon Slayer</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Supernatural</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 26</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 2 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('naruto')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/naruto.jpg" alt="Naruto"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Naruto</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Adventure</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 720</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 3 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('attack-on-titan')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/attack-on-titan.jpg" alt="Attack on Titan"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Attack on Titan</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Drama</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 75</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 4 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('black-clover')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/black-clover.png" alt="black clover"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Black Clover</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Comedy</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Supernatural</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 52</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 5 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('one-piece')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/one-piece.jpeg" alt="One Piece"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">one piece</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Fantasy</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Adventure</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 1000+</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Releases Section -->
+            <section id="new" class="mb-12">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-sky-800">New Releases</h2>
+                    <a href="#" class="text-sky-600 hover:text-sky-800 font-medium">View All</a>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    <!-- Anime Card 1 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('wind-breaker')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/wind-breaker.jpg" alt="Wind Breaker"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Wind Breaker</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Comedy</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 26</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 2 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('fairy-tail')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/fairy-tail.jpg" alt="fairy tail"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Fairy Tail</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Fantasy</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Magical</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 51</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 3 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('fire-force')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/fire-force.jpg" alt="Fire Force"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Fire Force</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py -1 rounded">Drama</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 57</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 4 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('blue-lock')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/blue-lock.jpg" alt="Blue Lock"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Blue Lock</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Sport</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Soccer</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 38</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 5 -->
+                     <div class="anime-card cursor-pointer" onclick="loadAnime('the-shiunji-family-children')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/the-shiunji-family-children.jpg"
+                                alt="The Shiunji Family Children" class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">The Shiunji Family Children</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Comedy</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Romance</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 12</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- Browse All Anime Section -->
+            <section id="browse" class="mb-12">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-sky-800">Browse All Anime</h2>
+                    <div class="flex space-x-2">
+                        <button class="pagination-btn bg-sky-600 text-white px-4 py-2 rounded">Previous</button>
+                        <button class="pagination-btn bg-sky-600 text-white px-4 py-2 rounded">Next</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+
+                    <!--Anime Card 1-->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('solo-leveling')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/solo-leveling.jpg" alt="Solo Leveling" class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Solo Leveling</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Fantasy</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 25</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 2 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('classroom-of-the-elite')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/classroom-of-the-elite.jpg" alt="One Piece" class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Classroom Of The Elite</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Drama</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">School</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 38</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+
+                    <!-- Anime Card 3 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('sword-art-online')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/sword-art-online.jpg" alt="Sword Art Online"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Sword Art Online</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Romance</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Adventure</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 96</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 4 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('mob-psycho-100')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/mob-psycho-100.jpg" alt="Mob Psycho 100"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Mob Psycho 100</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Comedy</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 37</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 5 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('jojos-bizarre-adventure')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/jojo-adventure.jpg" alt="JoJo's Bizarre Adventure"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">JoJo's Bizarre Adventure</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Adventure</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 74</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Anime Card 6-->
+
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('chainsaw-man')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/chainsaw-Man.jpg" alt="Chainsaw Man"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Chainsaw Man</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Horror</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 12</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 7 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('spy-x-family')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/Spy-x-Family.jpg" alt="Spy × Family"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Spy × Family</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Comedy</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 25</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 8 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('vinland-saga')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/vinland-saga.jpg" alt="Vinland Saga"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Vinland Saga</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py -1 rounded">Adventure</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 48</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 9 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('my-hero-academia')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/my-hero-academia.jpg" alt="My Hero Academia"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">My Hero Academia</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Superhero</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 88</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Card 10 -->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('tokyo-revengers')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/tokyo-revengers.jpg" alt="Tokyo Revengers"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Tokyo Revengers</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Drama</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 24</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Anime card 11-->
+                    <div class="anime-card cursor-pointer" onclick="loadAnime('mobile-suit-gundam')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/mobile-suit-gundam.jpg" alt="Mobile Suit Gundam GQuuuuuuX"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Mobile Suit Gundam GQuuuuuuX</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Drama</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 24</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Anime Card 12-->
+                     <div class="anime-card cursor-pointer" onclick="loadAnime('dr-stone')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/dr-stone.jpg" alt="dr stone"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Dr Stone</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Adventure</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Comedy</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 70</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Anime Card 13-->
+                     <div class="anime-card cursor-pointer" onclick="loadAnime('dan-da-dan')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/dan-da-dan.jpg" alt="dandadan"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">DANDADAN</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Adventure</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">comedy</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 12</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Anime Card 14-->
+                     <div class="anime-card cursor-pointer" onclick="loadAnime('ranma-half')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/ranma-half.png" alt="ranma hulf"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Ranma 1/2</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Comedy</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Romance</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 12</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Anime Card 15-->
+                     <div class="anime-card cursor-pointer" onclick="loadAnime('haikyuu')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/haikyuu.jpg" alt="haikyuu"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Haikyuu!!</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Sport</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Vollyball</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 60</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Anime Card 16-->
+                     <div class="anime-card cursor-pointer" onclick="loadAnime('tower-of-god')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/tower-of-god.jpg" alt="tower of god"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Tower Of God</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Mystry</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Fantasy</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 39</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Anime Card 17-->
+                     <div class="anime-card cursor-pointer" onclick="loadAnime('k-pop-demon-hunters')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/k-pop-demon-hunters.jpg" alt="Mobile Suit Gundam GQuuuuuuX"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Kpop Demon Hunters</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Comedy</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Fantasy</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 24</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Anime Card 18-->
+                     <div class="anime-card cursor-pointer" onclick="loadAnime('jujutsu-kaisen')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Jujutsu Kaisen</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Supernatural</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 24</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Anime Card 19-->
+                     <div class="anime-card cursor-pointer" onclick="loadAnime('bleach-thousand-year-blood-war')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/bleach-thousand-year-blood-war.jpg" alt="Mobile Suit Gundam GQuuuuuuX"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">Bleach: Thousand Year Blood War</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Action</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Adventure</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">shounen</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 52</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Anime Card 20-->
+                     <div class="anime-card cursor-pointer" onclick="loadAnime('the-apothecary-diaries')">
+
+                        <div class="overflow-hidden h-48">
+                            <img src="Image/the-apothecary-diaries.jpg" alt="the apothecary diaries"
+                                class="w-full h-full object-cover anime-card-img">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-lg mb-1">The Apothecary Diaries</h3>
+                            <div class="flex flex-wrap gap-1 mb-2">
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Comedy</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Drama</span>
+                                <span class="genre-tag text-xs px-2 py-1 rounded">Mystry</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Episodes: 44</span>
+                                <button class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded text-sm">
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-sky-600 text-white py-6">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2023 Hindi Anime. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="animePage" class="hidden px-4 py-8 max-w-3xl mx-auto"></div>
+
+    
+
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuButton = document.getElementById('close-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+
+    <script>
+        function loadAnime(animeId) {
+            // Hide homepage, show episode page
+            document.getElementById("homePage").classList.add("hidden");
+            document.getElementById("animePage").classList.remove("hidden");
+
+            fetch('data/anime-data.json')
+                .then(res => res.json())
+                .then(data => {
+                    const anime = data.find(a => a.id === animeId);
+                    if (!anime) return;
+
+                    const animePage = document.getElementById("animePage");
+                    animePage.innerHTML = `
+                    <!-- Header -->
+                    <header class="bg-gradient-to-r from-sky-600 to-sky-400 text-white px-6 py-4 shadow">
+                        <div class="max-w-4xl mx-auto flex justify-between items-center">
+                            <h1 class="text-2xl font-bold">Hindi Anime</h1>
+                            <a href="../index.html" class="text-white hover:underline text-sm">← Back to Home</a>
+                        </div>
+                    </header>
+
+  <div class="relative mb-8">
+    <img src="${anime.banner || 'images/default-banner.jpg'}" class="w-full h-100 object-cover rounded-lg shadow" alt="${anime.title} banner">
+    <div class="absolute inset-0 bg-black/50 rounded-lg flex items-end p-6">
+      <h2 class="text-white text-3xl font-bold">${anime.title}</h2>
+    </div>
+  </div>
+
+  <div class="mb-4 flex flex-wrap gap-2">
+    ${anime.genres.map(g => `<span class="bg-sky-200 text-sky-800 text-sm px-3 py-1 rounded-full">${g}</span>`).join("")}
+  </div>
+
+  <p class="mb-6 text-gray-700 leading-relaxed">${anime.description}</p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-800 mb-6">
+    <div class="bg-white shadow p-4 rounded-lg">
+      <p class="text-gray-500">Type</p>
+      <p class="font-semibold">${anime.type}</p>
+    </div>
+    <div class="bg-white shadow p-4 rounded-lg">
+      <p class="text-gray-500">Episodes</p>
+      <p class="font-semibold">${anime.episodes}</p>
+    </div>
+    <div class="bg-white shadow p-4 rounded-lg">
+      <p class="text-gray-500">Rating</p>
+      <p class="font-semibold">${anime.rating || 'N/A'}</p>
+    </div>
+  </div>
+
+ <div class="mt-8 space-y-4">
+  <a href="${anime.watchPage}" class="block bg-sky-600 hover:bg-sky-700 text-white text-center px-6 py-4 rounded-lg shadow-lg text-lg font-semibold">
+    📢 Join Our Telegram Channel for Latest Hindi Dubbed Anime →
+  </a>
+
+  <div class="flex gap-4">
+    <a href="${anime.downloadPage}" class="bg-sky-500 hover:bg-sky-700 text-white px-6 py-2 rounded shadow w-full text-center">📥 Download</a>
+    <a href="${anime.watchPage}" class="bg-sky-500 hover:bg-sky-700 text-white px-6 py-2 rounded shadow w-full text-center">▶️ Watch Online</a>
+  </div>
+
+  <div class="bg-white shadow p-4 rounded-lg">
+     <p class="text-gray-500">Seasons</p>
+     <p class="font-semibold">${anime.season}</p>
+    </div>
+
+  <div class="bg-white shadow p-4 rounded-lg max-w-full overflow-x-auto">
+    <p class="text-grey-500">Characters</p>
+    <p class="font-semibold whitespace-normal break-words">${anime.characters}</p>
+    </div>
+
+`;
+
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+    .catch(error => {
+        alert("Error loading anime data");
+            console.error(error);
+        });
+    }
+
+        function goBack() {
+            document.getElementById("homePage").classList.remove("hidden");
+            document.getElementById("animePage").classList.add("hidden");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+
+</html>
